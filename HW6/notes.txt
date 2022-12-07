@@ -1,0 +1,66 @@
+class BillProcessor {
+	public static void prepareBill(LinkedHashMap<String, Integer> purchases, LinkedHashMap<String,Double>
+		items, LinkedHashMap<String,String> sales, ArrayList<String> itemNames) {
+		total cost = 0
+		total discount = 0
+		for each item in purchases:
+			compute the regular cost
+			if item is subject to a sale (i.e. it appears in the sales lhm)
+				determine the sales price 
+					if it's bogo - mod operator and the int/int
+					if it's not bogo - apply the discount price
+				compute the actual cost based on that
+				total cost = total cost + actual cost
+				total disc = total disc + discount
+			print a line formatted like the example that summarizes the purchase of that item
+		print the summary
+	}
+}
+
+public class KlumpGroceryStore {
+	private static LinkedHashMap<String, Double> items;  // storage for the items and their costs
+	private static LinkedHashMap<String, String> sales;  // storage for the itema and their sale descriptions
+	private static LinkedHashMap<String, Integer> purchases; // storage for the items and their quantities
+	private static ArrayList<String> itemNames;
+	public static LinkedHashMap<String,Double> readItemsFromFile(String fname) {
+		LinkedHashMap<String,Double> result = new LinkedHashMap<String,Double>();
+		itemNames = new ArrayList<String>();
+    		open up the file
+		for each line of the file
+			split it into its two parts at the tab
+			result.put(item name, the price you read for it)
+			itemNames.add(the item name you read)
+		close the file
+		Collections.sort(itemNames);
+		return the result
+		
+        }
+	public static LinkedHashMap<String, String> readSalesFromFile(String fname) {
+		LinkedHashMap<String,String> result = new LinkedHashMap<String,String>();
+		open the file
+		for each line of the file
+			split it at the tab
+			result.put(item name, the sales description)
+		close the file
+		return the result
+	}
+	public static void presentMenuOfItems() {
+		for each itemName in itemNames:
+			print itemName along with items[itemName] and a description based on sales[itemName]
+		add on the "q" to quit option
+	}
+	public static void main(String[] args) {
+		items = readitemsFromFile("items.txt");
+		sales = readSalesFromFile("sales.txt");
+		purchases = new LinkedHashMap<String,Integer>();
+		present to the user the table of grocery items
+		do {
+			ask them to the choice
+			use the number and the itemNames to figure out the name of the item
+			if the purchases lhm already has that item
+				purchases[the item name] = purchases[the item name] + 1
+			else
+				purchases[the item name] = 1;  // first time purchase of that item
+		} while they don't want to quit
+		BillProcessor.prepareBill(purchases, items, sales, itemNames);
+}

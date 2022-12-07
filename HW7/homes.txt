@@ -1,0 +1,26 @@
+MLS-174234	1701 North Sheffield Avenue	Chicago	IL	60614	2	1	265000	Cozy apartment with great windows and outstanding views in south Lincoln Park
+	Master Bedroom	12	10
+	Bed Room	9	10
+	Kitchen	10	10
+	Living Room	10	12
+	Laundry	3	3
+	Closet	4	2
+MLS-192478	5521 University Pkwy	Romeoville	IL	60446	5	3.5	520600	Large, well-decorated family home in a quiet residential neighborhood.
+	Master Bedroom	20	17
+	Bedroom 2	13	12
+	Bedroom 3	11	14
+	Bedroom 4	16	12
+	Bedroom 5	12	12
+	Master Bath	12	15
+	Bath 2	10	8
+	Bath 3	8	6
+	Bath 4	10	12
+	Kitchen	15	10
+	Dining Room	13	13
+	Living Room	13	15
+	Family Room	15	20
+MLS-123678	23 Primrose River Lane	Channahon	IL	60550	1	0.5	89500	Rustic shack in a flood plane on the banks for the DuPage River
+	Bedroom	8	9
+	Kitchen	8	8
+	Outhouse	2	3
+	Living Room	6	6
